@@ -5,7 +5,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 repositories {
-  mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
@@ -13,23 +13,23 @@ dependencies {
     compile group: 'com.google.http-client', name: 'google-http-client', version: '1.15.0-rc'
 }
 
-uploadArchives {
-  repositories.mavenDeployer {
-    name = 'sshDeployer'
-    repository(url: "https://clojars.org/repo") {
-      authentication(userName: clojarsUsername, password: clojarsPassword)
-    }
-    pom.project {
-      name 'rxjava-http-tail'
-      packaging 'jar'
-      description 'RxJava-based tail -f for HTTP'
-      url 'https://github.com/myfreeweb/rxjava-http-tail'
-
-      scm {
-        url 'scm:git://github.com/myfreeweb/rxjava-http-tail.git'
-        connection 'scm:git://github.com/myfreeweb/rxjava-http-tail.git'
-        developerConnection 'scm:git@github.com:myfreeweb/rxjava-http-tail.git'
-      }
-    }
-  }
-}
+//uploadArchives {
+//    repositories.mavenDeployer {
+//        name = 'sshDeployer'
+//        repository(url: "https://clojars.org/repo") {
+//            authentication(userName: clojarsUsername, password: clojarsPassword)
+//        }
+//        pom.project {
+//            name 'rxjava-http-tail'
+//            packaging 'jar'
+//            description 'RxJava-based tail -f for HTTP'
+//            url 'https://github.com/myfreeweb/rxjava-http-tail'
+//
+//            scm {
+//                url 'scm:git://github.com/myfreeweb/rxjava-http-tail.git'
+//                connection 'scm:git://github.com/myfreeweb/rxjava-http-tail.git'
+//                developerConnection 'scm:git@github.com:myfreeweb/rxjava-http-tail.git'
+//            }
+//        }
+//    }
+//}
